@@ -99,7 +99,7 @@ behoben habe.
 
 In FHEM folgendes angelegt:
 <p>
-define RhasspyMQTT MQTT <ip_des_rhasspy>:12183<br>
+define RhasspyMQTT MQTT [ip_des_rhasspy]:12183<br>
 define Rhasspy RHASSPY RhasspyMQTT Wohnzimmer<br>
 attr RhasspyMQTT room Rhasspy<br>
 attr RhasspyMQTT rhasspyRoom Wohnzimmer<br>
