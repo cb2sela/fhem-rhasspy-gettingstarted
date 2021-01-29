@@ -61,11 +61,21 @@ Das war bei mir nicht der Fall und ich habe nichts geändert aber die Default-Ei
 Links auf das Haus-Symbol und den blauen Download-Knopf vor "Rhasspy needs to download some files for your profile" drücken.
 Wörter, bei deren Aussprache er nicht sicher ist einfach bestätigen.<br>
 
-Unter dem Haus-Symbol bei Sentences nun diesen Eintrag hinzufügen:
+Unter dem Haus-Symbol bei Sentences nun diese Einträge hinzufügen:
 <p>
 [de.fhem:SetOnOff]<br>
-schalte (die | das) (wohnzimmerlampe | garagenlicht){Device} (an | ein | aus){Value}<br>
+schalte (die | das) (wohnzimmerlampe | stehlampe){Device} (an | ein | aus){Value}<br>
+</p>
 <p>
+[de.fhem:GetNumeric]<br>
+(wie ist die|wie warm ist es){Type:Temperatur} [temperatur] [(thermometer){Device}] [(im |in der)] [(wohnzimmer|bad|schlafzimmer|kinderzimmer|garage|draussen){Room}]<br>
+</p>
+<p>
+[de.fhem:GetTime]<br>
+wie spät ist es<br>
+sag mir die uhrzeit<br>
+</p>
+
 => Save Sentences + retrain
 
 In der aktuellen Rhasspy Version  2.5.9 ist es nun auch möglich, ohne größere Klimmzüge ein anderes Wakeword als Porcupine zu verwenden. Hierzu einfach auf "Wakewords" und im Dropdown das gewünschte Keyword aussuchen. Ich bin bei "Alexa" hängen geblieben, weil es kurz ist und sehr gut erkannt wird. 
