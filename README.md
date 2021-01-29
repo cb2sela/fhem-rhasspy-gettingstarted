@@ -109,7 +109,7 @@ attr MQTT2_SP111a rhasspyMapping SetOnOff:cmdOn=on,cmdOff=off<br>
 
 => Save config
 
-Nun sollte eine Schaltung per "Terminator [pause] Schalte die Wohnzimmerlampe an " funktionieren.
+Nun sollte eine Schaltung per "Alexa [pause] Schalte die Wohnzimmerlampe an " funktionieren.
 <p>
 
 Ansage Temperatur:
