@@ -5,14 +5,14 @@ Zum Zeitpunkt der Erstellung dieser kleinen Anleitung war vieles im Umbruch.
 SNIPS funktioniert so nicht mehr, die Anleitungen für SNIPS treffen teilweise nicht mehr zu und Rhasspy steht noch in den Anfängen.
 Ich selbst hatte leider viele Stunden mit Stolpersteinen und Rumprobieren verschwendet und schreibe deswegen diese kleine Anleitung.
 
-Es ist eine Momentaufnahme, die für mich persönlich Stand 2020-12 mit 2020-08-20-raspios-buster-armhf-lite auf zwei Raspberry Pis funktioniert hat. 
+Es ist eine Momentaufnahme, die für mich persönlich Stand 2021-01 mit 2021-01-11-raspios-buster-armhf-lite auf zwei Raspberry Pis funktioniert hat. 
 
 # Voraussetzungen
 Ich gehe davon aus, dass Du eine funktionierende FHEM Installation hast. 
 In meinem Fall ist das ein FHEM auf einem Raspberry Pi 2B (buster lite) mit Homematic CUL, einem Jeelink und u.a. ein paar Tasmota MQTT-Devices.
 
 Weiterhin brauchst Du ein Mikrofon. Ich habe mich dabei für ein PS3eye entschieden, welches man gebraucht für 10-15 Euro bekommen kann.
-Aktuell läuft Rhasspy bei mir auf einem eigenen Raspberry 4 (buster lite), aber sobald alles stabil läuft werde ich es auf den FHEM-Raspy installieren.
+Rhasspy läuft bei mir auf einem eigenen Raspberry 4 (buster lite). Ich hatte ursprünglich einmal erwogen, es auch auf meinen Raspberry 2B mit FHEM zu packen, aber die Reaktionen sind dann etwas zäh und Spracherkennung macht nicht ganz so viel Spaß. 
 
 # Zielsetzung
 Hinterher kannst Du per Wakeword und anschließender Spracheingabe Dinge in FHEM steuern und Dir ansagen lassen.
@@ -68,20 +68,9 @@ schalte (die | das) (wohnzimmerlampe | garagenlicht){Device} (an | ein | aus){Va
 <p>
 => Save Sentences + retrain
 
-Weil das existierende Wakeword "Porcupine" wohl nicht nach jedermanns Geschmack ist habe ich mich für das Wakeword Terminator entschieden. 
-Es gibt ein knappes Dutzend anderer verfügbarer Wakewords. 
-Dazu auf den raspi einloggen, auf welchem Rhasspy läuft und:
-<p>
-sudo mkdir /home/pi/.config/rhasspy/profiles/de/porcupine/<br>
-cd /home/pi/.config/rhasspy/profiles/de/porcupine/<br>
-sudo wget "https://github.com/Picovoice/porcupine/blob/master/resources/keyword_files/raspberry-pi/terminator_raspberry-pi.ppn"<br>
-<p>
+In der aktuellen Rhasspy Version  2.5.9 ist es nun auch möglich, ohne größere Klimmzüge ein anderes Wakeword als Porcupine zu verwenden. Hierzu einfach auf "Wakewords" und im Dropdown das gewünschte Keyword aussuchen. Ich bin bei "Alexa" hängen geblieben, weil es kurz ist und sehr gut erkannt wird. 
 
-In der Rhasspy-Gui auf Settings / Wakeword. Dort bei Keyword File: terminator.ppn eintragen.<br>
-
-=> save + restart
-
-Zwischenstand: Wenn man nun in Rhasspy auf das Häuschen klickt und "Terminator" sagt, kurz wartet und dann "Schalte die Wohnzimmerlampe an" sagt, dann sollte er alles korrekt erkennen, aber natürlich noch nichts tun.
+Zwischenstand: Wenn man nun in Rhasspy auf das Häuschen klickt, "Alexa" sagt, kurz wartet und dann "Schalte die Wohnzimmerlampe an" sagt, dann sollte er alles korrekt erkennen, aber natürlich noch nichts tun.
 
 # 2. FHEM einrichten
 Einloggen auf die FHEM-Maschine:
