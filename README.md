@@ -80,7 +80,7 @@ sag mir die uhrzeit<br>
 
 In der aktuellen Rhasspy Version  2.5.9 ist es nun auch möglich, ohne größere Klimmzüge ein anderes Wakeword als Porcupine zu verwenden. Hierzu einfach auf "Wakewords" und im Dropdown das gewünschte Keyword aussuchen. Ich bin bei "Alexa" hängen geblieben, weil es kurz ist und sehr gut erkannt wird. 
 
-Zwischenstand: Wenn man nun in Rhasspy auf das Häuschen klickt, "Alexa" sagt, kurz wartet und dann "Schalte die Wohnzimmerlampe an" sagt, dann sollte er alles korrekt erkennen, aber natürlich noch nichts tun.
+Zwischenstand: Wenn man nun in Rhasspy auf das Häuschen klickt, "Alexa" sagt, kurz wartet und dann "Schalte die Stehlampe an" sagt, dann sollte er alles korrekt erkennen, aber natürlich noch nichts tun.
 
 # 2. FHEM einrichten
 Einloggen auf die FHEM-Maschine:
@@ -111,7 +111,7 @@ attr Rhasspy rhasspyRoom Wohnzimmer<br>
 Damit ich nun meine Gosund SP111 MQTT-Steckdose mit dem Namen MQTT2_SP111a auch ansprechen und schalten kann:
 <p>
 
-attr MQTT2_SP111a rhasspyName wohnzimmerlampe<br>
+attr MQTT2_SP111a rhasspyName stehlampe<br>
 attr MQTT2_SP111a room Rhasspy,MQTT2_DEVICE<br>
 attr MQTT2_SP111a rhasspyRoom Wohnzimmer<br>
 attr MQTT2_SP111a rhasspyMapping SetOnOff:cmdOn=on,cmdOff=off<br>
@@ -119,7 +119,7 @@ attr MQTT2_SP111a rhasspyMapping SetOnOff:cmdOn=on,cmdOff=off<br>
 
 => Save config
 
-Nun sollte eine Schaltung per "Alexa [pause] Schalte die Wohnzimmerlampe an " funktionieren.
+Nun sollte eine Schaltung per "Alexa [pause] Schalte die Stehlampe an " funktionieren.
 <p>
 
 Ansage Temperatur:
