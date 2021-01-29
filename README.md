@@ -78,7 +78,7 @@ sag mir die uhrzeit<br>
 
 => Save Sentences + retrain
 
-In der aktuellen Rhasspy Version  2.5.9 ist es nun auch möglich, ohne größere Klimmzüge ein anderes Wakeword als Porcupine zu verwenden. Hierzu einfach auf "Wakewords" und im Dropdown das gewünschte Keyword aussuchen. Ich bin bei "Alexa" hängen geblieben, weil es kurz ist und sehr gut erkannt wird. 
+In der aktuellen Rhasspy Version  2.5.9 ist es nun auch möglich, ohne größere Klimmzüge ein anderes Wakeword als Porcupine zu verwenden. Hierzu einfach auf "Wakewords" und im Dropdown das gewünschte Keyword aussuchen. Ich bin bei "Alexa" hängen geblieben, weil es kurz ist und sehr gut erkannt wird. Meiner Erfahrung nach sollte man das erste A etwas länger aussprechen, also eher Aalexa. 
 
 Zwischenstand: Wenn man nun in Rhasspy auf das Häuschen klickt, "Alexa" sagt, kurz wartet und dann "Schalte die Stehlampe an" sagt, dann sollte er alles korrekt erkennen, aber natürlich noch nichts tun.
 
